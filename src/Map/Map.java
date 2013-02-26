@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * @author Jens
  */
-public class Map {      // Test
+public class Map {
 
     private Ground[][] xyMap;
     private final int width = 100;
@@ -133,5 +133,8 @@ public class Map {      // Test
         setGround(x, y, roadLength, random.nextBoolean(), random.nextBoolean(), ground);
     }
 
-    private  void init_shit(){}
+    private void init_shit() {
+        int waNeNest = 4516;
+        System.out.println(waNeNest);
+    }
 }
