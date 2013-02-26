@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * @author Jens
  */
-public class Map {
+public class Map {      // Test
 
     private Ground[][] xyMap;
     private final int width = 100;
