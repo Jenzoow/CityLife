@@ -16,6 +16,7 @@ public class Map {
     private final int width = 100;
     private final int height = 100;
     private int endX = 0, endY = 0;
+    private int numberOfRoads = 0;
 
     public Map() {
         init_map(width, height);
@@ -137,7 +138,9 @@ public class Map {
         int y = random.nextInt(width);
         Ground ground = new Road();
         int roadLength = random.nextInt(Math.max(height, width)) + 10;
+        numberOfRoads += roadLength;
         setGround(x, y, roadLength, random.nextBoolean(), random.nextBoolean(), ground);
+
     }
 
     private void init_river() {
@@ -147,14 +150,14 @@ public class Map {
         boolean vertical = true, v;
         boolean horizontal = true, h;
         int sectionCount = random.nextInt(10);
-        System.out.println(sectionCount);
+        //System.out.println(sectionCount);
         int endX = random.nextInt(xyMap.length);
         int endY = random.nextInt(xyMap.length);
         int teller = 0;
         do {
             Random r = new Random();
             int sectionLength = random.nextInt(10);
-            System.out.println(sectionLength);
+            //System.out.println(sectionLength);
 
             v = (Math.random() < 0.5);
             h = (Math.random() < 0.5);
@@ -167,7 +170,8 @@ public class Map {
     }
 
     private void nextRoad() {
-        // Search buildable road;
+        // Search random buildable road;
+        Random random = new Random();
         Ground road = new Road();
         boolean roadFound = false;
         boolean buildLeft = false;
@@ -176,36 +180,44 @@ public class Map {
         boolean buildDown = false;
         int x = 0;
         int y = 0;
+        int randomRoad = random.nextInt(numberOfRoads);
+        int roadsFound = 0;
         Ground buildableRoad = null;
+        System.out.println("Number of roads " + numberOfRoads);
+        System.out.println("randomRoad " + randomRoad);
         for (int i = 0; (i < width) && !roadFound; i++) {
             for (int j = 0; (j < height) && !roadFound; j++) {
+                //System.out.println(i + " " + j);
                 if (xyMap[i][j].name == "Road") {
-                    // Road found, check buildable edges
-                    try {
-                        if (xyMap[i - 1][j].canBuildOn) {
-                            roadFound = true;
-                            buildUp = true;
-                            buildableRoad = xyMap[i - 1][j];
+                    roadsFound++;
+                    if (roadsFound == randomRoad) {
+                        // Road found, check buildable edges
+                        try {
+                            if (xyMap[i - 1][j].canBuildOn) {
+                                roadFound = true;
+                                buildUp = true;
+                                buildableRoad = xyMap[i - 1][j];
+                            }
+                            if (xyMap[i + 1][j].canBuildOn) {
+                                roadFound = true;
+                                buildDown = true;
+                                buildableRoad = xyMap[i + 1][j];
+                            }
+                            if (xyMap[i][j - 1].canBuildOn) {
+                                roadFound = true;
+                                buildLeft = true;
+                                buildableRoad = xyMap[i][j - 1];
+                            }
+                            if (xyMap[i][j + 1].canBuildOn) {
+                                roadFound = true;
+                                buildRight = true;
+                                buildableRoad = xyMap[i][j + 1];
+                            }
+                            x = i;
+                            y = j;
+                        } catch (Exception e) {
+                            // Happens when looking for (i-1) at edge of map. No problem. Just an easy way to fix this!!
                         }
-                        if (xyMap[i + 1][j].canBuildOn) {
-                            roadFound = true;
-                            buildDown = true;
-                            buildableRoad = xyMap[i + 1][j];
-                        }
-                        if (xyMap[i][j - 1].canBuildOn) {
-                            roadFound = true;
-                            buildLeft = true;
-                            buildableRoad = xyMap[i][j - 1];
-                        }
-                        if (xyMap[i][j + 1].canBuildOn) {
-                            roadFound = true;
-                            buildRight = true;
-                            buildableRoad = xyMap[i][j + 1];
-                        }
-                        x = i;
-                        y = j;
-                    } catch (Exception e) {
-                        // Happens when looking for (i-1) at edge of map. No problem. Just an easy way to fix this!!
                     }
                 }
             }
@@ -213,7 +225,6 @@ public class Map {
 
         // Draw new road from found [x,y]
         // Pick direction
-        Random random = new Random();
         boolean chosen = false;
         boolean vertical = false;
         boolean rightDown = false;
@@ -252,6 +263,8 @@ public class Map {
             }
         }
         Ground ground = new Road();
-        setGround(x, y, random.nextInt(50) + 1, vertical, rightDown, ground);
+        int roadLength = random.nextInt(50) + 1;
+        setGround(x, y, roadLength, vertical, rightDown, ground);
     }
 }
+
