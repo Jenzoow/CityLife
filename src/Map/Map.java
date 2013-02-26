@@ -132,4 +132,30 @@ public class Map {
         int roadLength = random.nextInt(Math.max(height, width)) + 10;
         setGround(x, y, roadLength, random.nextBoolean(), random.nextBoolean(), ground);
     }
+
+    private void init_river(){
+        Random random = new Random();
+        Water w = new Water();
+        Ground g = w;
+        boolean vertical=true,v;
+        boolean horizontal=true,h;
+        int sectionCount = random.nextInt(10);
+        System.out.println(sectionCount);
+        int endX = random.nextInt(xyMap.length);
+        int endY = random.nextInt(xyMap.length);
+        int teller=0;
+        do{
+            Random r = new Random();
+            int sectionLength = random.nextInt(10);
+            System.out.println(sectionLength);
+
+            v = (Math.random() <0.5);
+            h = (Math.random() <0.5);
+
+            vertical=v;
+            horizontal=h;
+            setGround(endX,endY,sectionLength,vertical,horizontal,g);
+            teller++;
+        }while(teller<=sectionCount);
+    }
 }
