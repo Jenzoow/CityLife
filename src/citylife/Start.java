@@ -37,6 +37,7 @@ public class Start {
                 p.dagOuder();
             }
         }
+
     }
 
     public  void nextDay(int aantalDagen) {

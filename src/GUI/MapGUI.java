@@ -15,11 +15,12 @@ import javax.swing.JScrollPane;
  */
 public class MapGUI {
     static int CELLWIDTH = 32;
+    static Map map;
 
     private static void createAndShowGui() {
-        
+        map = new Map();
         ColorGrid mainPanel;
-        mainPanel = new ColorGrid(new Map(), CELLWIDTH);
+        mainPanel = new ColorGrid(map, CELLWIDTH);
         JScrollPane scrollPane = new JScrollPane(mainPanel);
         JFrame frame = new JFrame("CityLife");
         frame.setExtendedState(frame.getExtendedState()|JFrame.MAXIMIZED_BOTH);
@@ -33,4 +34,5 @@ public class MapGUI {
     public static void main(String[] args) {
         createAndShowGui();
     }
+
 }
