@@ -15,11 +15,13 @@ public class Map {
     private Ground[][] xyMap;
     private final int width = 100;
     private final int height = 100;
+    private int endX=0,endY=0;
 
     public Map() {
         init_map(width, height);
         init_trees();
         init_road();
+        init_river();
     }
 
     private void init_map(int width, int height) {
@@ -93,11 +95,13 @@ public class Map {
             if (rightDown) { // Vertical Down
                 for (int i = 0; (i < sectionLength) && ((x + i) < height); i++) {
                     xyMap[x + i][y] = ground;
+                    endX++;
                 }
             } else {// Vertical Up
                 for (int i = sectionLength; (i >= 0); i--) {
                     if ((x - i) >= 0) {
                         xyMap[x - i][y] = ground;
+                        endX--;
                     }
                 }
             }
@@ -105,11 +109,13 @@ public class Map {
             if (rightDown) { // Horizontal right
                 for (int i = 0; (i < sectionLength) && ((y + i) < width); i++) {
                     xyMap[x][y + i] = ground;
+                    endY++;
                 }
             } else { // Horizontal Left
                 for (int i = sectionLength; (i >= 0); i--) {
                     if ((y - i) > 0) {
                         xyMap[x][y - i] = ground;
+                        endY--;
                     }
                 }
             }
@@ -139,19 +145,20 @@ public class Map {
         Ground g = w;
         boolean vertical=true,v;
         boolean horizontal=true,h;
-        int sectionCount = random.nextInt(10);
+        int sectionCount = random.nextInt(20);
         System.out.println(sectionCount);
-        int endX = random.nextInt(xyMap.length);
-        int endY = random.nextInt(xyMap.length);
+        endX = random.nextInt(xyMap.length);
+        endY = random.nextInt(xyMap.length);
         int teller=0;
         do{
             Random r = new Random();
-            int sectionLength = random.nextInt(10);
+            int sectionLength = random.nextInt(20);
             System.out.println(sectionLength);
-
+             do{
             v = (Math.random() <0.5);
             h = (Math.random() <0.5);
-
+                 System.out.println("opnieft");
+             }while(v==vertical && h==!horizontal);
             vertical=v;
             horizontal=h;
             setGround(endX,endY,sectionLength,vertical,horizontal,g);
