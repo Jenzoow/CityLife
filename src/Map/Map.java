@@ -132,4 +132,6 @@ public class Map {      // Test
         int roadLength = random.nextInt(Math.max(height, width)) + 10;
         setGround(x, y, roadLength, random.nextBoolean(), random.nextBoolean(), ground);
     }
+
+    private  void init_shit(){}
 }
