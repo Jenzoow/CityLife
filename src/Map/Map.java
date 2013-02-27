@@ -4,6 +4,9 @@
  */
 package Map;
 
+import Buildings.House.*;
+
+
 import java.awt.*;
 import java.util.Random;
 
@@ -145,8 +148,7 @@ public class Map {
 
     private void init_river() {
         Random random = new Random();
-        Water w = new Water();
-        Ground g = w;
+        Ground g = new Water();
         boolean vertical = true, v;
         boolean horizontal = true, h;
         int sectionCount = random.nextInt(10);
@@ -155,7 +157,6 @@ public class Map {
         int endY = random.nextInt(xyMap.length);
         int teller = 0;
         do {
-            Random r = new Random();
             int sectionLength = random.nextInt(10);
             //System.out.println(sectionLength);
 
@@ -170,101 +171,131 @@ public class Map {
     }
 
     private void nextRoad() {
-        // Search random buildable road;
-        Random random = new Random();
-        Ground road = new Road();
-        boolean roadFound = false;
-        boolean buildLeft = false;
-        boolean buildUp = false;
-        boolean buildRight = false;
-        boolean buildDown = false;
-        int x = 0;
-        int y = 0;
-        int randomRoad = random.nextInt(numberOfRoads);
-        int roadsFound = 0;
-        Ground buildableRoad = null;
-        System.out.println("Number of roads " + numberOfRoads);
-        System.out.println("randomRoad " + randomRoad);
-        for (int i = 0; (i < width) && !roadFound; i++) {
-            for (int j = 0; (j < height) && !roadFound; j++) {
-                //System.out.println(i + " " + j);
-                if (xyMap[i][j].name == "Road") {
-                    roadsFound++;
-                    if (roadsFound == randomRoad) {
-                        // Road found, check buildable edges
-                        try {
-                            if (xyMap[i - 1][j].canBuildOn) {
-                                roadFound = true;
-                                buildUp = true;
-                                buildableRoad = xyMap[i - 1][j];
-                            }
-                            if (xyMap[i + 1][j].canBuildOn) {
-                                roadFound = true;
-                                buildDown = true;
-                                buildableRoad = xyMap[i + 1][j];
-                            }
-                            if (xyMap[i][j - 1].canBuildOn) {
-                                roadFound = true;
-                                buildLeft = true;
-                                buildableRoad = xyMap[i][j - 1];
-                            }
-                            if (xyMap[i][j + 1].canBuildOn) {
-                                roadFound = true;
-                                buildRight = true;
-                                buildableRoad = xyMap[i][j + 1];
-                            }
-                            x = i;
-                            y = j;
-                        } catch (Exception e) {
-                            // Happens when looking for (i-1) at edge of map. No problem. Just an easy way to fix this!!
-                        }
-                    }
-                }
-            }
-        }
+        // Search random buildable road
+        Point p = searchBuildableRoad();
 
-        // Draw new road from found [x,y]
+        // Draw new road from found point
         // Pick direction
+        boolean[] direction = pickBuildableDirection(p.x, p.y);
+
+        Ground ground = new Road();
+        Random random = new Random();
+        int roadLength = random.nextInt(50) + 1;
+        numberOfRoads += roadLength;
+        setGround(p.x, p.y, roadLength, direction[0], direction[1], ground);
+    }
+    
+    private boolean buildableToUp(int x, int y){
+        try {
+            return xyMap[x - 1][y].canBuildOn;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean buildableToDown(int x, int y){
+        try {
+            return xyMap[x + 1][y].canBuildOn;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean buildableToLeft(int x, int y){
+        try {
+            return xyMap[x][y  - 1].canBuildOn;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean buildableToRight(int x, int y){
+        try {
+            return xyMap[x][y  + 1].canBuildOn;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean[] pickBuildableDirection(int x, int y){
+        Random random = new Random();
         boolean chosen = false;
-        boolean vertical = false;
-        boolean rightDown = false;
         int chosenDirection;
+        boolean[] verticalAndRightDown = new boolean[2];
         while (!chosen) {
             chosenDirection = random.nextInt(4);
             switch (chosenDirection) {
                 case 0: // UP
-                    if (buildUp == true) {
+                    if (buildableToUp(x, y)) {
                         chosen = true;
-                        vertical = true;
-                        rightDown = false;
+                        verticalAndRightDown[0] = true;
+                        verticalAndRightDown[1] = false;
                     }
                     break;
                 case 1: // Down
-                    if (buildDown == true) {
+                    if (buildableToDown(x, y)) {
                         chosen = true;
-                        vertical = true;
-                        rightDown = true;
+                        verticalAndRightDown[0] = true;
+                        verticalAndRightDown[1] = true;
                     }
                     break;
                 case 2: // Left
-                    if (buildLeft == true) {
+                    if (buildableToLeft(x, y)) {
                         chosen = true;
-                        vertical = false;
-                        rightDown = false;
+                        verticalAndRightDown[0] = false;
+                        verticalAndRightDown[1] = false;
                     }
                     break;
                 case 3: // Right
-                    if (buildRight == true) {
+                    if (buildableToRight(x, y)) {
                         chosen = true;
-                        vertical = false;
-                        rightDown = true;
+                        verticalAndRightDown[0] = false;
+                        verticalAndRightDown[1] = true;
                     }
                     break;
             }
         }
-        Ground ground = new Road();
-        int roadLength = random.nextInt(50) + 1;
-        setGround(x, y, roadLength, vertical, rightDown, ground);
+        return verticalAndRightDown;
     }
+    
+    private Point searchBuildableRoad(){
+        Point p = new Point();
+
+        Random random = new Random();
+        boolean roadFound = false;               
+        int randomRoad = random.nextInt(numberOfRoads);
+        int roadsFound = 0;
+        for (int i = 0; (i < width) && !roadFound; i++) {
+            for (int j = 0; (j < height) && !roadFound; j++) {
+                if (xyMap[i][j].name.equals("Road")) {
+                    roadsFound++;
+                    if (roadsFound == randomRoad) {
+                        // Road found, check buildable edges
+                            if ((buildableToDown(i, j)) || (buildableToLeft(i, j)) || (buildableToRight(i, j)) || buildableToUp(i, j)){
+                                roadFound = true;
+                            }
+                            p.x = i;
+                            p.y = j;
+                    }
+                }
+            }
+        }
+        return p;
+       
+    }
+
+    private void placeHouse(int x, int y, boolean vertical, boolean rightDown) {
+        Ground hA1 = new HouseA1();
+        Ground hA2 = new HouseA2();
+        Ground hB1 = new HouseB1();
+        Ground hB2 = new HouseB2();
+        for (int i = x; i < 2; i++) {
+            for (int j = y; j < 2; j++) {
+                setGround(i, j, hA1);
+            }
+        }
+    }
+
+
 }
 
