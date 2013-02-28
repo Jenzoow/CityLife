@@ -19,10 +19,6 @@ public class Road extends Ground {
         this("Road");
     }
 
-    @Override
-    public Color getColor() {
-        return Color.GRAY;
-    }
 
 
 }

@@ -29,10 +29,6 @@ public abstract class Ground {
         this("Ground");
     }
 
-    public Color getColor() {
-        return Color.black;
-    }
-
     public String getImagePath(){
         return "/Images/" + name + ".jpg";
     }

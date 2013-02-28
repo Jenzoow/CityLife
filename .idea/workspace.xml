@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d1f979b-ca7b-4fd5-b81e-41d07585400e" name="Default" comment="Added search">
+    <list default="true" id="9d1f979b-ca7b-4fd5-b81e-41d07585400e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Map/BuildDirection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Buildings/House/House.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Map/Needs.java" />
+      <change type="DELETED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\src\Images\HouseA1.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\src\Images\HouseA2.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\src\Images\HouseB1.gif" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\out\production\CityLife\Images\HouseLeftDown.gif" afterPath="$PROJECT_DIR$/src/Images/HouseB1.jpg" />
+      <change type="MOVED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\out\production\CityLife\Images\HouseLeftUp.gif" afterPath="$PROJECT_DIR$/src/Images/HouseA1.jpg" />
+      <change type="MOVED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\out\production\CityLife\Images\HouseRightUp.gif" afterPath="$PROJECT_DIR$/src/Images/HouseA2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Ground.java" afterPath="$PROJECT_DIR$/src/Map/Ground.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Buildings/House/HouseA1.java" afterPath="$PROJECT_DIR$/src/Buildings/House/HouseA1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Map.java" afterPath="$PROJECT_DIR$/src/Map/Map.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Road.java" afterPath="$PROJECT_DIR$/src/Map/Road.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Water.java" afterPath="$PROJECT_DIR$/src/Map/Water.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityLife.iws" />
@@ -13,13 +26,18 @@
     <file path="/Ground.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361834700125" ignored="false" />
     <file path="/Grass.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361832684314" ignored="false" />
     <file path="/ColorGrid.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361917369774" ignored="false" />
-    <file path="/Map.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361967412456" ignored="false" />
+    <file path="/Map.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362060220649" ignored="false" />
     <file path="/Tree.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361886233087" ignored="false" />
     <file path="/MapGUI.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361919572344" ignored="false" />
-    <file path="/Dummy.txt" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361967489572" ignored="false" />
-    <file path="/HouseA1.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361908589700" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362051015681" ignored="false" />
+    <file path="/HouseA1.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362051346623" ignored="false" />
     <file path="/MyMouseListener.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361917130090" ignored="false" />
     <file path="/Start.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361919360319" ignored="false" />
+    <file path="/House.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362058866659" ignored="false" />
+    <file path="/BuildDirection.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362059596468" ignored="false" />
+    <file path="/Functions.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362060050609" ignored="false" />
+    <file path="/Building.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362057406819" ignored="false" />
+    <file path="/fragment.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362059934968" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +52,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -69,6 +86,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -78,67 +96,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Start.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/citylife/Start.java">
+      <file leaf-file-name="House.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Buildings/House/House.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Map/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="19" selection-start="540" selection-end="540" vertical-scroll-proportion="-11.888587">
+            <state line="17" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#9184#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CityLife.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/citylife/CityLife.java">
+      <file leaf-file-name="Needs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Needs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="53" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+            <state line="37" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="19" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#8734#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Water.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Water.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="4" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Persoon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/citylife/Persoon.java">
+      <file leaf-file-name="Road.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+            <state line="21" column="4" selection-start="313" selection-end="313" vertical-scroll-proportion="0.83152175">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorGrid.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/ColorGrid.java">
+      <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/citylife/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="41" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyMouseListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MyMouseListener.java">
+      <file leaf-file-name="BuildDirection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/BuildDirection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="44" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+            <state line="18" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapGUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MapGUI.java">
+      <file leaf-file-name="Ground.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Ground.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
+            <state line="29" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grass.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Grass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,22 +203,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Map/Ground.java" />
-        <option value="$PROJECT_DIR$/src/Map/Tree.java" />
-        <option value="$PROJECT_DIR$/src/Map/Grass.java" />
-        <option value="$PROJECT_DIR$/src/namegenerator/NameGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Map/Flower.java" />
-        <option value="$PROJECT_DIR$/src/Buildings/HouseA1.java" />
-        <option value="$PROJECT_DIR$/src/Buildings/HouseA2.java" />
-        <option value="$PROJECT_DIR$/src/Buildings/HouseB1.java" />
-        <option value="$PROJECT_DIR$/src/Buildings/HouseB2.java" />
         <option value="$PROJECT_DIR$/src/Buildings/House/HouseB2.java" />
         <option value="$PROJECT_DIR$/src/Buildings/House/School/HouseB1.java" />
         <option value="$PROJECT_DIR$/src/GUI/MyMouseListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/ColorGrid.java" />
         <option value="$PROJECT_DIR$/src/citylife/Start.java" />
         <option value="$PROJECT_DIR$/src/GUI/MapGUI.java" />
+        <option value="$PROJECT_DIR$/src/Buildings/House/HouseA1.java" />
+        <option value="$PROJECT_DIR$/src/Map/Ground.java" />
+        <option value="$PROJECT_DIR$/src/Buildings/Building.java" />
+        <option value="$PROJECT_DIR$/src/Buildings/House/House.java" />
+        <option value="$PROJECT_DIR$/src/Map/BuildDirection.java" />
+        <option value="$PROJECT_DIR$/src/Functions.java" />
+        <option value="$PROJECT_DIR$/src/Needs.java" />
         <option value="$PROJECT_DIR$/src/Map/Map.java" />
+        <option value="$PROJECT_DIR$/src/Map/Water.java" />
+        <option value="$PROJECT_DIR$/src/Map/Road.java" />
       </list>
     </option>
   </component>
@@ -239,7 +279,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,24 +347,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="citylife" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -348,43 +369,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Buildings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="House" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="165" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="165" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="166" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="166" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="166" />
@@ -399,16 +399,16 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -488,19 +488,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -527,6 +514,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -622,7 +622,11 @@
       <created>1361922974523</created>
       <updated>1361922974523</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added searchBuildableRoad() en pickBuildingDirection()">
+      <created>1361967533793</created>
+      <updated>1361967533793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -632,6 +636,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -642,17 +647,16 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15080526" sideWeight="0.21967213" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14860907" sideWeight="0.23114754" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15080526" sideWeight="0.4147541" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14860907" sideWeight="0.40327868" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967213" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35409835" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982906" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -693,7 +697,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better nextRoad()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added searchBuildableRoad() en pickBuildingDirection()" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -709,6 +713,7 @@
     <MESSAGE value="SomeShit" />
     <MESSAGE value="Added nextRoad()&#10;Added clickable Labels" />
     <MESSAGE value="Better nextRoad()" />
+    <MESSAGE value="Added searchBuildableRoad() en pickBuildingDirection()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,75 +723,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/namegenerator/NameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="12" selection-start="5915" selection-end="5915" vertical-scroll-proportion="-2.9265175" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map/Flower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map/Grass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="203" selection-end="314" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Images/HouseA1.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buildings/House/HouseA1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="0" selection-end="359" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buildings/House/HouseA2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buildings/House/HouseB1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buildings/House/HouseB2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="67" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="-5.44" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MyMouseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/citylife/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ColorGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="41" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MapGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -800,18 +739,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/citylife/CityLife.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="53" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+        <state line="20" column="45" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ColorGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Images/HouseA1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MapGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Buildings/House/HouseA1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="295" selection-end="295" vertical-scroll-proportion="0.37842464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Grass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Ground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/BuildDirection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/citylife/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Buildings/House/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Needs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Map/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="540" selection-end="540" vertical-scroll-proportion="-11.888587">
+        <state line="28" column="19" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#9184#0" expanded="true" />
+            <element signature="e#0#8734#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Water.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="313" selection-end="313" vertical-scroll-proportion="0.83152175">
+          <folding />
         </state>
       </provider>
     </entry>

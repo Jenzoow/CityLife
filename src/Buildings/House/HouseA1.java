@@ -17,4 +17,6 @@ public class HouseA1 extends Ground{
     public HouseA1() {
         this("HouseA1");
     }
+
+
 }

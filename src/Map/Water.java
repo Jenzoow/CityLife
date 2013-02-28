@@ -19,10 +19,6 @@ public class Water extends Ground {
         this("OWater");
     }
 
-    @Override
-    public Color getColor() {
-        return Color.BLUE;
-    }
 
     @Override
     public String getImagePath() {
