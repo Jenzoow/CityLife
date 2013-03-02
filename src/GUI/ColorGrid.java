@@ -6,11 +6,10 @@ package GUI;
 
 import Map.Ground;
 import Map.Map;
+import utils.Functions;
+import utils.ImageUtils;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import javax.swing.*;
 
@@ -35,7 +34,24 @@ public class ColorGrid extends JPanel {
                 myLabel.setOpaque(true);
                 String path = xyMap[row][col].getImagePath();
                 ImageIcon icon = new ImageIcon(getClass().getResource(path));
-                icon = new ImageIcon(icon.getImage());
+                Image image = icon.getImage();
+                if (xyMap[row][col].getBuildDirection() != null){
+                    switch (xyMap[row][col].getBuildDirection()) {
+                        case RIGHT:
+
+                            break;
+                        case DOWN:
+                            image = ImageUtils.rotateImage(image, 90);
+                            break;
+                        case LEFT:
+                            image = ImageUtils.rotateImage(image, 180);
+                            break;
+                        case UP:
+                            image = ImageUtils.rotateImage(image, 270);
+                            break;
+                    }
+                }
+                icon = new ImageIcon(image);
                 myLabel.addMouseListener(myListener);
                 myLabel.setIcon(icon);
                 myLabel.setPreferredSize(labelPrefSize);

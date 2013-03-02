@@ -6,7 +6,8 @@ package Map;
 
 
 import Buildings.House.House;
-import citylife.Statistics;
+import utils.Functions;
+
 import java.awt.*;
 import java.util.Random;
 
@@ -18,15 +19,16 @@ public class Map {
     private Ground[][] xyMap;
     private final int width = 100;
     private final int height = 100;
-    private int endX = 0, endY = 0;
-    private int numberOfRoads = 0;
 
     public Map() {
         init_map(width, height);
         init_trees();
         init_road();
-        //init_river();
-        nextRoad();
+        init_river();
+        Random random = new Random();
+        Ground ground = new Water();
+        setGround(random.nextInt(width), random.nextInt(height), ground );
+        growTrees(30, 16, ground);
     }
 
     private void init_map(int width, int height) {
@@ -99,25 +101,24 @@ public class Map {
         if (buildDirection == BuildDirection.DOWN) {
             for (int i = 0; (i < sectionLength) && ((x + i) < height); i++) {
                 xyMap[x + i][y] = ground;
-                endX++;
             }
-        } else if (buildDirection == BuildDirection.UP) {// Vertical Up
+        } else if (buildDirection == BuildDirection.UP) {
             for (int i = sectionLength; (i >= 0); i--) {
                 if ((x - i) >= 0) {
                     xyMap[x - i][y] = ground;
-                    endX--;
                 }
             }
         } else if (buildDirection == BuildDirection.RIGHT) {
             for (int i = 0; (i < sectionLength) && ((y + i) < width); i++) {
-                xyMap[x][y + i] = ground;
-                endY++;
+                if ((y + i) < width){
+                    xyMap[x][y + i] = ground;
+                }
+
             }
         } else if (buildDirection == BuildDirection.LEFT) {
             for (int i = sectionLength; (i >= 0); i--) {
                 if ((y - i) > 0) {
                     xyMap[x][y - i] = ground;
-                    endY--;
                 }
             }
         }
@@ -137,8 +138,8 @@ public class Map {
         int y = random.nextInt(width);
         Ground ground = new Road();
         int roadLength = random.nextInt(Math.max(height, width)) + 10;
-        numberOfRoads += roadLength;
-        BuildDirection buildDirection = Needs.randomBuildDirection();
+        BuildDirection buildDirection = Functions.randomBuildDirection();
+
         setGround(x, y, roadLength, buildDirection, ground);
 
     }
@@ -146,23 +147,37 @@ public class Map {
     private void init_river() {
         Random random = new Random();
         Ground g = new Water();
-        boolean vertical = true, v;
-        boolean horizontal = true, h;
-        int sectionCount = random.nextInt(10);
-        //System.out.println(sectionCount);
+        int sectionCount = random.nextInt(10) + 2;
+
+        System.out.println(sectionCount);
         int endX = random.nextInt(xyMap.length);
         int endY = random.nextInt(xyMap.length);
         int teller = 0;
+        BuildDirection buildDirection = Functions.randomBuildDirection();   ;
         do {
-            int sectionLength = random.nextInt(10);
-            //System.out.println(sectionLength);
-
-            v = (Math.random() < 0.5);
-            h = (Math.random() < 0.5);
-
-            vertical = v;
-            horizontal = h;
-            //setGround(endX, endY, sectionLength, vertical, horizontal, g);
+            int sectionLength = random.nextInt(10) + 2;
+            System.out.println(sectionLength);
+            BuildDirection nextBuildDirection;
+            do {
+                nextBuildDirection = Functions.randomBuildDirection();
+            } while (nextBuildDirection == buildDirection.getOposite(buildDirection));
+            buildDirection = nextBuildDirection;
+            System.out.println(nextBuildDirection);
+            setGround(endX, endY, sectionLength, nextBuildDirection, g);
+            switch (buildDirection) {
+                case RIGHT:
+                    endY += sectionLength;
+                    break;
+                case DOWN:
+                    endX += sectionLength;
+                    break;
+                case LEFT:
+                    endY -= sectionLength;
+                    break;
+                case UP:
+                    endX -= sectionLength;
+                    break;
+            }
             teller++;
         } while (teller <= sectionCount);
     }
@@ -178,7 +193,6 @@ public class Map {
         Ground ground = new Road();
         Random random = new Random();
         int roadLength = random.nextInt(50) + 1;
-        numberOfRoads += roadLength;
         setGround(p.x, p.y, roadLength, buildDirection, ground);
     }
 
@@ -253,10 +267,10 @@ public class Map {
 
     private Point searchBuildableRoad() {
         Point p = new Point();
-
         Random random = new Random();
         boolean roadFound = false;
-        int randomRoad = random.nextInt(numberOfRoads);
+//        System.out.println(countRoads());
+        int randomRoad = random.nextInt(countRoads());
         int roadsFound = 0;
         for (int i = 0; (i < width) && !roadFound; i++) {
             for (int j = 0; (j < height) && !roadFound; j++) {
@@ -278,10 +292,62 @@ public class Map {
 
     private void placeHouse() {
         Point p = searchBuildableRoad();
+//        System.out.println(p);
         BuildDirection buildDirection = pickBuildableDirection(p.x, p.y);
         House house = new House();
+        Ground[][] grounds = house.getHousePlan();
+        switch (buildDirection) {
+            case RIGHT:
+                for (int i = 0; i < grounds.length; i++) {
+                    for (int j = 0; j < grounds[i].length; j++) {
+                        grounds[i][j].setBuildDirection(BuildDirection.RIGHT);
+                        setGround(p.x + i, p.y + j + 1, grounds[i][j]);
+                    }
+                }
+                break;
+            case DOWN:
+                grounds = Functions.rotateCW(grounds);
+                for (int i = 0; i < grounds.length; i++) {
+                    for (int j = 0; j < grounds[i].length; j++) {
+                        grounds[i][j].setBuildDirection(BuildDirection.DOWN);
+                        setGround(p.x + i + 1, p.y + j, grounds[i][j]);
+                    }
+                }
+                break;
+            case LEFT:
+                grounds = Functions.rotateCW(grounds);
+                grounds = Functions.rotateCW(grounds);
+                for (int i = 0; i < grounds.length; i++) {
+                    for (int j = 0; j < grounds[i].length; j++) {
+                        grounds[i][j].setBuildDirection(BuildDirection.LEFT);
+                        setGround(p.x + i, p.y + j - 2, grounds[i][j]);
+                    }
+                }
+                break;
+            case UP:
+                grounds = Functions.rotateCW(grounds);
+                grounds = Functions.rotateCW(grounds);
+                grounds = Functions.rotateCW(grounds);
+                for (int i = 0; i < grounds.length; i++) {
+                    for (int j = 0; j < grounds[i].length; j++) {
+                        grounds[i][j].setBuildDirection(BuildDirection.UP);
+                        setGround(p.x + i - 2, p.y + j, grounds[i][j]);
+                    }
+                }
+                break;
+        }
+    }
 
-
+    private int countRoads() {
+        int numberOfRoads = 0;
+        for (int i = 0; i < xyMap.length; i++) {
+            for (int j = 0; j < xyMap[i].length; j++) {
+                if (xyMap[i][j].name == "Road") {
+                    numberOfRoads++;
+                }
+            }
+        }
+        return numberOfRoads;
     }
 
 

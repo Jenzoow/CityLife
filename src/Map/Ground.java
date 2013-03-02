@@ -14,6 +14,7 @@ public abstract class Ground {
     String name;
     char symbol;
     boolean canBuildOn;
+    BuildDirection buildDirection;
 
     public Ground(String name, Boolean canBuildOn) {
         this.name = name;
@@ -31,6 +32,14 @@ public abstract class Ground {
 
     public String getImagePath(){
         return "/Images/" + name + ".jpg";
+    }
+
+    public BuildDirection getBuildDirection() {
+        return buildDirection;
+    }
+
+    public void setBuildDirection(BuildDirection buildDirection) {
+        this.buildDirection = buildDirection;
     }
 
     @Override

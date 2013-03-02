@@ -18,5 +18,21 @@ public enum BuildDirection {
         this.rightDown = rightDown;
     }
 
+    public BuildDirection getOposite(BuildDirection buildDirection){
+        BuildDirection oposite;
+        if (buildDirection == BuildDirection.UP){
+            oposite = BuildDirection.DOWN;
+        } else if (buildDirection == BuildDirection.DOWN){
+            oposite = BuildDirection.UP;
+        } else       if (buildDirection == BuildDirection.LEFT){
+            oposite = BuildDirection.RIGHT;
+        } else    if (buildDirection == BuildDirection.RIGHT){
+            oposite = BuildDirection.LEFT;
+        } else {
+            oposite = null;
+        }
+        return oposite;
+    }
+
 
 }

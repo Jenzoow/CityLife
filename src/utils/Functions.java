@@ -1,8 +1,10 @@
-package Map;
+package utils;
 
 import Map.BuildDirection;
 import Map.Ground;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 /**
@@ -12,22 +14,25 @@ import java.util.Random;
  * Time: 15:02
  * To change this template use File | Settings | File Templates.
  */
-public class Needs {
-    public static Ground[][] rotateBuilding(Ground[][] building) {
-        Ground[][] newArray = new Ground[building[0].length][building.length];
+public class Functions {
+    public static Ground[][] rotateCW(Ground[][] building) {
+        final int M = building.length;
+        final int N = building[0].length;
+        Ground[][] ret = new Ground[N][M];
 
-        for (int i = 0; i < building[0].length; i++) {
-            for (int j = building.length - 1; j >= 0; j--) {
-                newArray[i][j] = building[j][i];
+            for (int r = 0; r < M; r++) {
+                for (int c = 0; c < N; c++) {
+                    ret[c][M-1-r] = building[r][c];
+                }
             }
-        }
-        return newArray;
+
+        return ret;
     }
 
     public static BuildDirection randomBuildDirection(){
         BuildDirection buildDirection = null;
         Random random = new Random();
-        int i = random.nextInt(4);
+        int i = random.nextInt(4)+1;
         switch (i){
             case 1: buildDirection = BuildDirection.LEFT; break;
             case 2: buildDirection = BuildDirection.RIGHT; break;
@@ -36,4 +41,5 @@ public class Needs {
         }
         return buildDirection;
     }
+
 }
