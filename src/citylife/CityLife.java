@@ -22,8 +22,8 @@ public class CityLife {
      */
     public static void main(String[] args) {
         Start start = new Start();  
-        start.nextDay(20000);
-        Statistics.leeftijdsTabel();
+        Statistics.printBevolking();
+
 
 
     }    

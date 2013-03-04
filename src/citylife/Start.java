@@ -11,7 +11,7 @@ import java.util.Calendar;
  * @author Jens
  */
 public class Start {
-    int AANTALPERSONEN = 1000;
+    int AANTALPERSONEN = 20;
 
     public Start() {
         initPersonen(AANTALPERSONEN);

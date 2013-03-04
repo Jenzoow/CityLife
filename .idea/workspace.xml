@@ -2,26 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d1f979b-ca7b-4fd5-b81e-41d07585400e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/ImageUtils.java" />
-      <change type="MOVED" beforePath="C:\Users\Jens\Documents\GitHub\CityLife\src\Map\Needs.java" afterPath="$PROJECT_DIR$/src/utils/Functions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/BuildDirection.java" afterPath="$PROJECT_DIR$/src/Map/BuildDirection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ColorGrid.java" afterPath="$PROJECT_DIR$/src/GUI/ColorGrid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Ground.java" afterPath="$PROJECT_DIR$/src/Map/Ground.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Flower.jpg" afterPath="$PROJECT_DIR$/src/Images/Flower.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/citylife/CityLife.java" afterPath="$PROJECT_DIR$/src/citylife/CityLife.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map/Map.java" afterPath="$PROJECT_DIR$/src/Map/Map.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/citylife/Start.java" afterPath="$PROJECT_DIR$/src/citylife/Start.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityLife.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/CityLife.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361831313020" ignored="false" />
+    <file path="/CityLife.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362412831741" ignored="false" />
     <file path="/NameGenerator.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361830998188" ignored="false" />
     <file path="/Statistics.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361831009514" ignored="false" />
     <file path="/Ground.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362247257912" ignored="false" />
     <file path="/Grass.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361832684314" ignored="false" />
     <file path="/ColorGrid.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362249060241" ignored="false" />
-    <file path="/Map.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362252095795" ignored="false" />
+    <file path="/Map.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362402258346" ignored="false" />
     <file path="/Tree.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361886233087" ignored="false" />
     <file path="/MapGUI.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361919572344" ignored="false" />
-    <file path="/Dummy.txt" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362244361353" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362395580095" ignored="false" />
     <file path="/HouseA1.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1362051346623" ignored="false" />
     <file path="/MyMouseListener.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361917130090" ignored="false" />
     <file path="/Start.java" changelist="9d1f979b-ca7b-4fd5-b81e-41d07585400e" time="1361919360319" ignored="false" />
@@ -90,17 +88,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Map.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Map/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="52" selection-start="947" selection-end="947" vertical-scroll-proportion="0.7521866">
+            <state line="396" column="8" selection-start="14118" selection-end="14118" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="method#getWidth#0;class#Map#0" expanded="false" />
-                <element signature="method#getHeight#0;class#Map#0" expanded="false" />
+                <element signature="method#init_map#0;class#Map#0" expanded="false" />
+                <element signature="method#init_trees#0;class#Map#0" expanded="false" />
+                <element signature="method#growTrees#0;class#Map#0" expanded="false" />
                 <element signature="method#getXyMap#0;class#Map#0" expanded="false" />
-                <element signature="method#setGround#1;class#Map#0" expanded="false" />
-                <element signature="method#init_road#0;class#Map#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Persoon.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/citylife/Persoon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="38" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.3321918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityLife.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/citylife/CityLife.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="43" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Start.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/citylife/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Road.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Buildings/House/HouseA1.java" />
-        <option value="$PROJECT_DIR$/src/Buildings/Building.java" />
         <option value="$PROJECT_DIR$/src/Buildings/House/House.java" />
         <option value="$PROJECT_DIR$/src/Functions.java" />
         <option value="$PROJECT_DIR$/src/Needs.java" />
@@ -176,6 +207,8 @@
         <option value="$PROJECT_DIR$/src/utils/Functions.java" />
         <option value="$PROJECT_DIR$/src/Map/BuildDirection.java" />
         <option value="$PROJECT_DIR$/src/Map/Map.java" />
+        <option value="$PROJECT_DIR$/src/citylife/Start.java" />
+        <option value="$PROJECT_DIR$/src/citylife/CityLife.java" />
       </list>
     </option>
   </component>
@@ -236,6 +269,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,60 +305,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -344,62 +324,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Buildings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CityLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Buildings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="House" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="165" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="165" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="165" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="166" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="166" />
@@ -414,16 +353,16 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -438,7 +377,7 @@
       <recent name="C:\Users\Jens\Dropbox\CityLife" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MapGUI">
+  <component name="RunManager" selected="Application.CityLife">
     <configuration default="false" name="CityLife" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -503,6 +442,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -529,19 +481,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -586,8 +525,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.MapGUI" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CityLife" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CityLife" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MapGUI" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -645,7 +584,11 @@
       <created>1362060383856</created>
       <updated>1362060383856</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added placeHouse, fixed River, added Lake">
+      <created>1362252260152</created>
+      <updated>1362252260152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -666,16 +609,16 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.33442622" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.5491803" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.3" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35409835" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.43934426" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967213" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11147541" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967213" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -716,7 +659,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Needs ( klasse me wa functions in ), Added BuildDirection," />
+    <option name="LAST_COMMIT_MESSAGE" value="Added placeHouse, fixed River, added Lake" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -734,49 +677,23 @@
     <MESSAGE value="Better nextRoad()" />
     <MESSAGE value="Added searchBuildableRoad() en pickBuildingDirection()" />
     <MESSAGE value="Added Needs ( klasse me wa functions in ), Added BuildDirection," />
+    <MESSAGE value="Added placeHouse, fixed River, added Lake" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/citylife/Persoon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/citylife/CityLife.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Images/HouseA1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MapGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Map/Grass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="176" selection-end="176" vertical-scroll-proportion="0.36956522">
           <folding />
         </state>
       </provider>
@@ -846,16 +763,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_13/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="0" selection-start="4506" selection-end="4506" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map/Road.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Map/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="52" selection-start="947" selection-end="947" vertical-scroll-proportion="0.7521866">
+        <state line="396" column="8" selection-start="14118" selection-end="14118" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#getWidth#0;class#Map#0" expanded="false" />
-            <element signature="method#getHeight#0;class#Map#0" expanded="false" />
+            <element signature="method#init_map#0;class#Map#0" expanded="false" />
+            <element signature="method#init_trees#0;class#Map#0" expanded="false" />
+            <element signature="method#growTrees#0;class#Map#0" expanded="false" />
             <element signature="method#getXyMap#0;class#Map#0" expanded="false" />
-            <element signature="method#setGround#1;class#Map#0" expanded="false" />
-            <element signature="method#init_road#0;class#Map#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/citylife/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/citylife/CityLife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/citylife/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="38" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.3321918">
+          <folding />
         </state>
       </provider>
     </entry>
