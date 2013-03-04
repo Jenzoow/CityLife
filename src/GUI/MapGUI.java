@@ -16,23 +16,27 @@ import javax.swing.JScrollPane;
 public class MapGUI {
     static int CELLWIDTH = 32;
     static Map map;
+    private JFrame frame;
+    ColorGrid mainPanel;
 
-    private static void createAndShowGui() {
+    public MapGUI() {
         map = new Map();
-        ColorGrid mainPanel;
-        mainPanel = new ColorGrid(map, CELLWIDTH);
-        JScrollPane scrollPane = new JScrollPane(mainPanel);
-        JFrame frame = new JFrame("CityLife");
+        frame = new JFrame("CityLife");
         frame.setExtendedState(frame.getExtendedState()|JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainPanel = new ColorGrid(map, CELLWIDTH);
+        JScrollPane scrollPane = new JScrollPane(mainPanel);
         frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
         frame.pack();
         frame.setLocationByPlatform(true);
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        createAndShowGui();
+    public void refresh(){
+        mainPanel.refresh();
     }
 
+    public static Map getMap() {
+        return map;
+    }
 }

@@ -20,9 +20,10 @@ import static javax.swing.JOptionPane.showMessageDialog;
  */
 public class ColorGrid extends JPanel {
     JLabel[][] myLabels;
+    Ground[][] xyMap;
 
     public ColorGrid(Map map, int cellWidth) {
-        Ground[][] xyMap = map.getXyMap();
+        xyMap = map.getXyMap();
         myLabels = new JLabel[map.getHeight()][map.getWidth()];
         MyMouseListener myListener = new MyMouseListener(this);
         Dimension labelPrefSize = new Dimension(cellWidth, cellWidth);
@@ -31,12 +32,38 @@ public class ColorGrid extends JPanel {
             for (int col = 0; col < xyMap[row].length; col++) {
                 JLabel myLabel;
                 myLabel = new JLabel();
-                myLabel.setOpaque(true);
                 String path = xyMap[row][col].getImagePath();
                 ImageIcon icon = new ImageIcon(getClass().getResource(path));
+
+                myLabel.setIcon(icon);
+                myLabel.setOpaque(true);
+                myLabel.addMouseListener(myListener);
+                myLabel.setPreferredSize(labelPrefSize);
+                add(myLabel);
+                myLabels[row][col] = myLabel;
+            }
+        }
+    }
+
+
+    public void labelPressed(JLabel label) {
+        for (int row = 0; row < myLabels.length; row++) {
+            for (int col = 0; col < myLabels[row].length; col++) {
+                if (label == myLabels[row][col]) {
+                    showMessageDialog(this, "Clicked grid: [" + row + "," + col + "]");
+                }
+            }
+        }
+    }
+
+    public void refresh(){
+        for (int i = 0; i < myLabels.length; i++){
+            for (int j = 0; j < myLabels[i].length; j++){
+                String path = xyMap[i][j].getImagePath();
+                ImageIcon icon = new ImageIcon(getClass().getResource(path));
                 Image image = icon.getImage();
-                if (xyMap[row][col].getBuildDirection() != null){
-                    switch (xyMap[row][col].getBuildDirection()) {
+                if (xyMap[i][j].getBuildDirection() != null) {
+                    switch (xyMap[i][j].getBuildDirection()) {
                         case RIGHT:
 
                             break;
@@ -52,21 +79,7 @@ public class ColorGrid extends JPanel {
                     }
                 }
                 icon = new ImageIcon(image);
-                myLabel.addMouseListener(myListener);
-                myLabel.setIcon(icon);
-                myLabel.setPreferredSize(labelPrefSize);
-                add(myLabel);
-                myLabels[row][col] = myLabel;
-            }
-        }
-    }
-
-    public void labelPressed(JLabel label) {
-        for (int row = 0; row < myLabels.length; row++) {
-            for (int col = 0; col < myLabels[row].length; col++) {
-                if (label == myLabels[row][col]) {
-                    showMessageDialog(this, "Clicked grid: [" + row + "," + col + "]");
-                }
+                myLabels[i][j].setIcon(icon);
             }
         }
     }

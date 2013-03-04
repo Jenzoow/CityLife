@@ -21,10 +21,10 @@ public class CityLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Start start = new Start();  
+        Start start = new Start();
+
         Statistics.printBevolking();
+    }
 
 
-
-    }    
 }

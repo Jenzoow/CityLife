@@ -129,7 +129,7 @@ public class Map {
 
             }
         } else if (buildDirection == BuildDirection.LEFT) {
-            for (int i = 1; i < sectionLength && (y -i) >= 0 ; i++) {
+            for (int i = 1; i < sectionLength; i++) {
                 if (!xyMap[x][y - i].canBuildOn) {
                     i = sectionLength;
                 } else {
@@ -344,7 +344,7 @@ public class Map {
 
     }
 
-    private void placeHouse() {
+    public void placeHouse() {
         Point p = searchBuildableRoad(2, 2);
         BuildDirection buildDirection = pickBuildableDirection(p.x, p.y, 2, 2);
         House house = new House();
